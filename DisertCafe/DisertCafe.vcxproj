@@ -23,6 +23,7 @@
     <ProjectGuid>{C3BE4D03-3C9A-4F30-BFAD-3D9E92B9B81A}</ProjectGuid>
     <RootNamespace>DisertCafe</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>DessertCafe</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
