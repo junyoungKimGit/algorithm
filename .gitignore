@@ -20,3 +20,7 @@ x64/Debug/checkWeightsBetweenTwo.ilk
 *.idb
 *.db
 .vs/SWExpert/v15/.suo
+x64/Debug/DisertCafe.ilk
+x64/Release/jumping.iobj
+x64/Release/jumping.ipdb
+*.ipch
