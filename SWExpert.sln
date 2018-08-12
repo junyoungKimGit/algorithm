@@ -59,6 +59,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeSecureService", "HomeSe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "makingNumber", "makingNumber\makingNumber.vcxproj", "{574E78FB-6E00-4CCA-A71D-BA4FCE902740}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cook", "cook\cook.vcxproj", "{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -291,6 +293,14 @@ Global
 		{574E78FB-6E00-4CCA-A71D-BA4FCE902740}.Release|x64.Build.0 = Release|x64
 		{574E78FB-6E00-4CCA-A71D-BA4FCE902740}.Release|x86.ActiveCfg = Release|Win32
 		{574E78FB-6E00-4CCA-A71D-BA4FCE902740}.Release|x86.Build.0 = Release|Win32
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Debug|x64.ActiveCfg = Debug|x64
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Debug|x64.Build.0 = Debug|x64
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Debug|x86.ActiveCfg = Debug|Win32
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Debug|x86.Build.0 = Debug|Win32
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Release|x64.ActiveCfg = Release|x64
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Release|x64.Build.0 = Release|x64
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Release|x86.ActiveCfg = Release|Win32
+		{7E59F07A-438D-447D-8D87-AC6AF31D0AFA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
