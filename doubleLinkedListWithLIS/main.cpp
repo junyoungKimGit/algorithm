@@ -1,16 +1,15 @@
-/*
-* main.cpp
-*
-*  Created on: 2018. 7. 18.
-*      Author: HY
-*/
-
+//4587. 흥민이의 리스트 되돌리기
 #include <iostream>
 
-using std::cin;
-using std::cout;
-using std::endl;
+using namespace std;
 
+
+
+int sTestNum = 0;
+int sListNum = 0;
+int sFuncNum = 0;
+
+#if 0 
 void LIS(int aArr[])
 {
 	int arr[100];
@@ -38,6 +37,39 @@ void LIS(int aArr[])
 	}
 }
 
+int LISAlgorithm(List aList, int aNodecnt)
+{
+	int *sArr = new int[aNodecnt];
+
+	for (int i = 0; i < aNodecnt; i++)
+	{
+		sArr[i] = i;
+	}
+
+	int sMax = 0;
+
+	int * sDP = new int[aNodecnt];
+	sDP[0] = 1;
+
+	for (int i = 1; i < aNodecnt; i++)
+	{
+		sDP[i] = 1;
+		for (int j = 0; j < i; j++)
+		{
+			if (sArr[j] < sArr[i] && sDP[j] + 1 > sDP[i])
+			{
+				sDP[i] = sDP[j] + 1;
+			}
+
+		}
+		if (sMax < sDP[i])
+			sMax = sDP[i];
+	}
+
+	return sMax;
+
+}
+#endif
 
 class Node
 {
@@ -63,6 +95,7 @@ public:
 
 	void insert(int aData);
 	void moveFunc(char aCase, int aA, int aB);
+	void printList();
 
 	Node * find(int aData);
 
@@ -132,6 +165,18 @@ void List::init(int aNodeCnt)
 
 
 	//	cout<<"init("<<aNodeCnt<<")"<<endl;
+}
+
+void List::printList()
+{
+	Node * sTemp = mHead->mNext;
+	cout << "PRINT LIST" << endl;
+	while (sTemp != mTail || sTemp->mNext != nullptr)
+	{
+		cout << sTemp->mData << " ";
+		sTemp = sTemp->mNext;
+	}
+	cout << endl;
 }
 
 void List::fin()
@@ -227,7 +272,7 @@ int List::findSolution()
 	Node * sFindNode;
 	Node * sFindNextNode;
 
-	while (sTempNode != mTail)
+	while (sTempNode != mTail && sData != sListNum && sData < sListNum)
 	{
 		if (sData == sTempNode->mData)
 		{
@@ -236,58 +281,28 @@ int List::findSolution()
 		}
 		else
 		{
+			//find Data
 			sFindNode = find(sData);
-			sFindNextNode = find(sTempNode->mData);
+			sFindNextNode = find(sData + 1);
 
-			moveFunc('A', sData, sTempNode->mData);
-			sData = 1;
-			sTempNode = mHead->mNext;
+			this->printList();
+			cout << "MOVE data: " <<sData<< endl;
+			moveFunc('A', sFindNode->mData, sFindNextNode->mData);
+			this->printList();
+			
+			sTempNode = sFindNode->mNext;
 			sFuncCnt++;
+			sData++;			
 		}
 	}
 
 	return sFuncCnt;
 }
 
-int LISAlgorithm(List aList, int aNodecnt)
-{
-	int *sArr = new int[aNodecnt];
-
-	for (int i = 0; i < aNodecnt; i++)
-	{
-		sArr[i] = i;
-	}
-
-	int sMax = 0;
-
-	int * sDP = new int[aNodecnt];
-	sDP[0] = 1;
-
-	for (int i = 1; i < aNodecnt; i++)
-	{
-		sDP[i] = 1;
-		for (int j = 0; j < i; j++)
-		{
-			if (sArr[j] < sArr[i] && sDP[j] + 1 > sDP[i])
-			{
-				sDP[i] = sDP[j] + 1;
-			}
-
-		}
-		if (sMax < sDP[i])
-			sMax = sDP[i];
-	}
-
-	return sMax;
-
-}
 
 int main()
 {
-	int sTestNum = 0;
-	int sListNum = 0;
-	int sFuncNum = 0;
-
+	
 	List sList;
 	char sCase;
 	int sA, sB;
@@ -299,10 +314,7 @@ int main()
 	{
 		cin >> sListNum >> sFuncNum;
 
-
 		sList.init(sListNum);
-
-
 
 		for (int j = 0; j < sFuncNum; j++)
 		{
@@ -310,14 +322,12 @@ int main()
 			sList.moveFunc(sCase, sA, sB);
 		}
 
-		sResult = sList.findSolution();
-		if (sResult > sFuncNum)
-			sResult = sFuncNum;
+		sResult = sList.findSolution();		
 		cout << "#" << i + 1 << " " << sResult << endl;
-
-
-		//		sList.fin();
+		
 	}
+
+	//cin >> sTestNum;
 
 	return 0;
 }
