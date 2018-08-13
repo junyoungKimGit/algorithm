@@ -63,6 +63,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cook", "cook\cook.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCS", "LCS\LCS.vcxproj", "{3737B83F-3325-478A-B7BB-B9B2A94BEA91}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergeSort", "MergeSort\MergeSort.vcxproj", "{88F3886D-AC9F-476A-908D-2B7C84B2C869}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -311,6 +313,14 @@ Global
 		{3737B83F-3325-478A-B7BB-B9B2A94BEA91}.Release|x64.Build.0 = Release|x64
 		{3737B83F-3325-478A-B7BB-B9B2A94BEA91}.Release|x86.ActiveCfg = Release|Win32
 		{3737B83F-3325-478A-B7BB-B9B2A94BEA91}.Release|x86.Build.0 = Release|Win32
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Debug|x64.ActiveCfg = Debug|x64
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Debug|x64.Build.0 = Debug|x64
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Debug|x86.ActiveCfg = Debug|Win32
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Debug|x86.Build.0 = Debug|Win32
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Release|x64.ActiveCfg = Release|x64
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Release|x64.Build.0 = Release|x64
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Release|x86.ActiveCfg = Release|Win32
+		{88F3886D-AC9F-476A-908D-2B7C84B2C869}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
