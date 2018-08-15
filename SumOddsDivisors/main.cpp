@@ -8,7 +8,7 @@ using namespace std;
 #define MAX_N (1000001)
 
 int gVisited[MAX_N];
-int gSum[MAX_N];
+long long gSumArr[MAX_N+10];
 
 int T, N, M;
 long long gSUM;
@@ -26,7 +26,8 @@ void initVisted(int aStart, int aN)
 
 void findSolve()
 {
-	int sInitStart = 0;;
+	int sInitStart = 0;
+	int sTempSum = 0;;
 	for (int i = N; i <= M; i++)
 	{
 		for (int j = 1; j <= i; j++)
@@ -53,7 +54,6 @@ void findSolve()
 
 				}
 			}
-
 		}
 
 		//cout << " i : " << i << " Sum : " << gSUM << endl;
@@ -64,22 +64,68 @@ void findSolve()
 	}
 }
 
+int oddNum(int aA)
+{
+	return (aA % 2) == 1 ? aA : 0;
+}
+
+void findSolve2()
+{
+	//int sTempMax = 11;;
+
+	for (int i = 1; i < MAX_N; i++)
+	{
+		for (int j = i; j * i < MAX_N; j++)
+		{
+			if (i * j > MAX_N)
+				break;
+			if (i == j)
+			{
+				gSumArr[i*j] += oddNum(j);
+			}
+			else
+			{
+				gSumArr[i*j] += oddNum(i) + oddNum(j);
+			}
+		}
+		if (i * i > MAX_N)
+			break;
+	}
+
+	//for (int i = 1; i < 20; i++)
+	//	cout << gSumArr[i] << " ";
+	//cout << endl;
+
+	for (int i = 2; i < MAX_N+1; i++)
+		gSumArr[i] += gSumArr[i-1];
+
+	/*for (int i = 1; i < 20; i++)
+		cout << gSumArr[i] << " ";
+	cout << endl;
+
+	cout << "init : " << gSumArr[1000000] - gSumArr[1000-1] << endl;*/
+
+}
+
 int main()
 {
 
+	findSolve2();
+	
 	cin >> T;
 
 	for (int t = 1; t <= T; t++)
 	{
 		cin >> N >> M;
 
-		findSolve();
+		//findSolve();
 
-		cout << "#" << " " << gSUM << endl;
+		gSUM = gSumArr[M] - gSumArr[N-1];
+
+		cout << "#" <<t<< " " << gSUM << endl;
 
 		gSUM = 0;
-	}
-	cin >> T;
+	}	
 
 	return 0;
 }
