@@ -75,6 +75,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SucecessShow", "SucecessSho
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawStraightLine", "DrawStraightLine\DrawStraightLine.vcxproj", "{2B293BBF-AE77-456B-8DC1-CE19170211CF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kongkong", "kongkong\kongkong.vcxproj", "{E2A8D94E-F674-42F0-803B-F053781F7B7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -371,6 +373,14 @@ Global
 		{2B293BBF-AE77-456B-8DC1-CE19170211CF}.Release|x64.Build.0 = Release|x64
 		{2B293BBF-AE77-456B-8DC1-CE19170211CF}.Release|x86.ActiveCfg = Release|Win32
 		{2B293BBF-AE77-456B-8DC1-CE19170211CF}.Release|x86.Build.0 = Release|Win32
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Debug|x64.ActiveCfg = Debug|x64
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Debug|x64.Build.0 = Debug|x64
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Debug|x86.ActiveCfg = Debug|Win32
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Debug|x86.Build.0 = Debug|Win32
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Release|x64.ActiveCfg = Release|x64
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Release|x64.Build.0 = Release|x64
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Release|x86.ActiveCfg = Release|Win32
+		{E2A8D94E-F674-42F0-803B-F053781F7B7A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
