@@ -79,6 +79,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kongkong", "kongkong\kongko
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatchMaking", "MatchMaking\MatchMaking.vcxproj", "{C293B7F9-5435-4248-ACAF-E54EB90E7C92}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShoppingAndSale", "ShoppingAndSale\ShoppingAndSale.vcxproj", "{7E51C8C3-3BCC-4C76-A695-79C6831F243E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -391,6 +393,14 @@ Global
 		{C293B7F9-5435-4248-ACAF-E54EB90E7C92}.Release|x64.Build.0 = Release|x64
 		{C293B7F9-5435-4248-ACAF-E54EB90E7C92}.Release|x86.ActiveCfg = Release|Win32
 		{C293B7F9-5435-4248-ACAF-E54EB90E7C92}.Release|x86.Build.0 = Release|Win32
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Debug|x64.ActiveCfg = Debug|x64
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Debug|x64.Build.0 = Debug|x64
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Debug|x86.ActiveCfg = Debug|Win32
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Debug|x86.Build.0 = Debug|Win32
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Release|x64.ActiveCfg = Release|x64
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Release|x64.Build.0 = Release|x64
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Release|x86.ActiveCfg = Release|Win32
+		{7E51C8C3-3BCC-4C76-A695-79C6831F243E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
