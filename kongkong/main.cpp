@@ -49,7 +49,5 @@ int main()
 		gCnt = 0;
 	}
 
-	cin >> T;
-
 	return 0;
 }
