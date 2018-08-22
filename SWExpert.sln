@@ -89,6 +89,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bracket", "bracket\bracket.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BASICFindPath", "BASICFindPath\BASICFindPath.vcxproj", "{DACE55E5-F652-44E8-8C3F-0D08BAFC01B6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BOJ_13308_주유소", "BOJ_13308_주유소\BOJ_13308_주유소.vcxproj", "{44CCA7DB-962D-4E82-8394-36125C6A5CD2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWE_4013_mysteriousMagnetic", "SWE_4013_mysteriousMagnetic\SWE_4013_mysteriousMagnetic.vcxproj", "{05CA10E9-040E-43D9-B11C-73072339987D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -441,6 +445,22 @@ Global
 		{DACE55E5-F652-44E8-8C3F-0D08BAFC01B6}.Release|x64.Build.0 = Release|x64
 		{DACE55E5-F652-44E8-8C3F-0D08BAFC01B6}.Release|x86.ActiveCfg = Release|Win32
 		{DACE55E5-F652-44E8-8C3F-0D08BAFC01B6}.Release|x86.Build.0 = Release|Win32
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Debug|x64.ActiveCfg = Debug|x64
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Debug|x64.Build.0 = Debug|x64
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Debug|x86.ActiveCfg = Debug|Win32
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Debug|x86.Build.0 = Debug|Win32
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Release|x64.ActiveCfg = Release|x64
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Release|x64.Build.0 = Release|x64
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Release|x86.ActiveCfg = Release|Win32
+		{44CCA7DB-962D-4E82-8394-36125C6A5CD2}.Release|x86.Build.0 = Release|Win32
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Debug|x64.ActiveCfg = Debug|x64
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Debug|x64.Build.0 = Debug|x64
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Debug|x86.ActiveCfg = Debug|Win32
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Debug|x86.Build.0 = Debug|Win32
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Release|x64.ActiveCfg = Release|x64
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Release|x64.Build.0 = Release|x64
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Release|x86.ActiveCfg = Release|Win32
+		{05CA10E9-040E-43D9-B11C-73072339987D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
