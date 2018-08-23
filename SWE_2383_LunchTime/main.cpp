@@ -67,12 +67,12 @@ void calcTime()
 	int sTotalMinTime = 0;
 	for (int sStaitIdx = 0; sStaitIdx < MAX_STAIR; sStaitIdx++)
 	{
-		int sArriveManCntAtTime[MAX_N * 2];
+		int sArriveManCntAtTime[MAX_N * 2] = { 0, };
 		//시간 t에서 계단에 도착하는 사람 수
-		int sCurrStair[MAX_TIME];
+		int sCurrStair[MAX_TIME] = { 0, };
 		//시간 t에서 계단을 내려가는 사람의 수
 
-		for (int sManIdx = 0; sManIdx < gManIdx; sManIdx)
+		for (int sManIdx = 0; sManIdx < gManIdx; sManIdx++)
 		{
 			if (gMatchManWithStair[sManIdx] == sStaitIdx)
 			{
@@ -127,7 +127,7 @@ void findSolve( int aManCnt)
 
 	for (int i = 0; i < MAX_STAIR; i++)
 	{
-		matchManWithStair[aManCnt] = i;
+		gMatchManWithStair[aManCnt] = i;
 		findSolve(aManCnt + 1);
 	}
 
@@ -155,7 +155,7 @@ int main()
 					gMAN[gManIdx].mY = j;
 					gManIdx++;
 				}
-				else
+				else if(gMap[i][j] > 1)
 				{
 					gStair[sStairIdx].mX = i;
 					gStair[sStairIdx].mY = j;
