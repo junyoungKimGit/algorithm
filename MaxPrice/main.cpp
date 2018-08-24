@@ -41,8 +41,6 @@ void findSolve(int aCnt, int aCurr)
 	//cout << "aCnt : " << aCnt << " aCurr : " << aCurr << endl;
 	if (aCnt == 0)
 	{
-		int sTempResult = 0;
-
 		MAX = max(MAX, getValue());
 
 		return;
@@ -54,9 +52,12 @@ void findSolve(int aCnt, int aCurr)
 		{
 			if (i == j)
 				continue;
-			swap(gNUM[i], gNUM[j]);
-			findSolve(aCnt - 1, i);
-			swap(gNUM[i], gNUM[j]);
+			if (gNUM[i] <= gNUM[j])
+			{
+				swap(gNUM[i], gNUM[j]);
+				findSolve(aCnt - 1, i);
+				swap(gNUM[i], gNUM[j]);
+			}
 
 		}
 	}
@@ -85,7 +86,7 @@ int main()
 		}
 
 		//cout << "INPUT : " << endl;
-		//for (int i = 0; i <= sO; i++)
+		//for (int i = 0; i < DIGIT; i++)
 		//	cout << gNUM[i] << " ";
 		//cout << endl;
 
@@ -99,8 +100,7 @@ int main()
 
 		DIGIT = 0;
 		MAX = 0;
-	}
-	cin >> T;
+	}	
 	
 	return 0;
 
