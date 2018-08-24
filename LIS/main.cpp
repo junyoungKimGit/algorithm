@@ -1,22 +1,20 @@
-/*
-* main.cpp
-*
-*  Created on: 2018. 7. 26.
-*      Author: HY
-*
-http://dyngina.tistory.com/16
-*/
+//http://dyngina.tistory.com/16
+//3307. 최장 증가 부분 수열
 
 #include <iostream>
-#include <algorithm>
-#include <vector>
 
 using namespace std;
 
+#define MAX_N (1001)
+
+unsigned int gArr[MAX_N];
+int T, N;
+
+//O(N^2)
 int LIS_V1(int aArr[])
 {
 	int sArrSize = sizeof(aArr) / sizeof(int);
-	int sDP[sArrSize] = { 0, };
+	int sDP[MAX_N] = { 0, };
 
 	int sMax = 0;
 	sDP[0] = 1;
@@ -37,7 +35,7 @@ int LIS_V1(int aArr[])
 	return sMax;
 }
 
-//return val : lower index of aArr
+//return val : lower index of aArr for LISV2
 int myLowerBound(int aArr[], int aN, int aKey)
 {
 	int sStart = 0;
@@ -60,10 +58,11 @@ int myLowerBound(int aArr[], int aN, int aKey)
 	return sEnd;
 }
 
-int LIS_V2(int aArr[], int aArrSize)
+//O(NLOGN)
+int LIS_V2(unsigned int aArr[], int aArrSize)
 {
 
-	int sDP[aArrSize] = { 0, };
+	int sDP[MAX_N] = { 0, };
 
 	int sSize = 1;
 	sDP[0] = aArr[0];
@@ -84,12 +83,12 @@ int LIS_V2(int aArr[], int aArrSize)
 	}
 
 
-	cout << "Final sDP :";
-	for (int j = 0; j < sSize; j++)
-	{
-		cout << sDP[j] << " ";
-	}
-	cout << endl;
+	//cout << "Final sDP :";
+	//for (int j = 0; j < sSize; j++)
+	//{
+	//	cout << sDP[j] << " ";
+	//}
+	//cout << endl;
 
 	return sSize;
 }
@@ -97,9 +96,21 @@ int LIS_V2(int aArr[], int aArrSize)
 int main(void)
 {
 
-	int sArr[9] = { 20, 10, 40, 25, 20, 50, 30, 70, 85 };
-	int sRet = LIS_V2(sArr, 9);
-	cout << sRet << endl;
+	cin >> T;
+
+	for (int t = 1; t <= T; t++)
+	{
+		cin >> N;
+
+		for (int i = 0; i < N; i++)
+		{
+			cin >> gArr[i];
+		}
+
+		cout << "#" << t << " " << LIS_V2(gArr, N) << endl;
+	}
+
+	//cin >> T;
 
 
 	return 0;
