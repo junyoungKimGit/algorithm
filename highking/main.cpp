@@ -1,10 +1,4 @@
-/*
-* main.cpp
-*
-*  Created on: 2018. 7. 27.
-*      Author: HY
-1949. [모의 SW 역량테스트] 등산로 조성
-*/
+//1949. [모의 SW 역량테스트] 등산로 조성
 
 #include <iostream>
 
