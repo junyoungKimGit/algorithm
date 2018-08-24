@@ -1,4 +1,5 @@
 //3304. 최장 공통 부분 수열 
+//http://mygumi.tistory.com/126
 
 #include <iostream>
 
