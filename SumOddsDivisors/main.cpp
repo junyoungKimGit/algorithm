@@ -24,6 +24,7 @@ void initVisted(int aStart, int aN)
 		gVisited[i] = 0;
 }
 
+//timeout!!
 void findSolve()
 {
 	int sInitStart = 0;

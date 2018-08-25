@@ -1,10 +1,5 @@
 
 /*
-* main.cpp
-*
-*  Created on: 2018. 7. 25.
-*      Author: JY
-*
 *      น้มุ 3055 ลปรโ
 *
 in
