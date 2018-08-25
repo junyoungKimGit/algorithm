@@ -65,6 +65,7 @@ void secondPhase()
 
 //줄세우기
 //quickSort
+//잘안됨
 void firstPhase(int aStart, int aEnd)
 {
 
