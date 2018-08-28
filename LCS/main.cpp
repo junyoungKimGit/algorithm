@@ -65,6 +65,8 @@ int findSolve()
 	return LCS[ASTRINGLEN][BSTRINGLEN];
 }
 
+//출력 함수도 구현해볼것
+
 
 int main()
 {
