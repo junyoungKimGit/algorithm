@@ -9,7 +9,7 @@ using namespace std;
 int gMap[3][MAX_N];
 int gCntNum[MAX_N];
 
-int T, N, REMOVE_CNT;
+int T, N, REMOVE_CNT, REMOVE_NUMBER_CNT;
 
 void findTargetAndRemove(int aTarget);
 
@@ -54,6 +54,9 @@ void findTargetAndRemove(int aTarget)
 		{
 			if (gMap[i][j] == aTarget)
 			{
+				if (i == 0)
+					REMOVE_NUMBER_CNT++;
+
 				removeCol(j, aTarget);
 				return;
 			}
@@ -77,17 +80,18 @@ int countLeftNum()
 
 void findSolve()
 {	
-	while (N - REMOVE_CNT > 3)
+	
+	for (int i = 1; i <= N; i++)
 	{
-		for (int i = 1; i <= N; i++)
+		if (N - REMOVE_NUMBER_CNT > 3)
 		{
 			if (gCntNum[i] <= 2)
 			{
 				findTargetAndRemove(i);
-				continue;
 			}
 		}
 	}
+	
 }
 
 int main()
@@ -99,6 +103,7 @@ int main()
 	for (int t = 1; t <= T; t++)
 	{
 		cin >> N;
+		REMOVE_NUMBER_CNT = 0;
 
 		for (int i = 0; i < 3; i++)
 		{
@@ -106,7 +111,7 @@ int main()
 			{
 				cin >> sInput;
 				gMap[i][j] = sInput;				
-				gCntNum[sInput]++;
+				gCntNum[sInput]++;				
 			}
 		}
 
@@ -115,6 +120,7 @@ int main()
 		for (int i = 1; i <= N; i++)
 		{
 			gCntNum[i] = 0;
+			
 		}
 
 		cout << "#" << t << " " << REMOVE_CNT << endl;
