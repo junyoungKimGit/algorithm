@@ -99,6 +99,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IsolationMicrobe", "Isolati
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_5295", "SWEA_5295\SWEA_5295.vcxproj", "{CE0E508C-E607-45E5-8A68-415324588A35}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_1798", "SWEA_1798\SWEA_1798.vcxproj", "{BE966F75-5F1F-4C8B-857B-F314A684D132}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -491,6 +493,14 @@ Global
 		{CE0E508C-E607-45E5-8A68-415324588A35}.Release|x64.Build.0 = Release|x64
 		{CE0E508C-E607-45E5-8A68-415324588A35}.Release|x86.ActiveCfg = Release|Win32
 		{CE0E508C-E607-45E5-8A68-415324588A35}.Release|x86.Build.0 = Release|Win32
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Debug|x64.ActiveCfg = Debug|x64
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Debug|x64.Build.0 = Debug|x64
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Debug|x86.ActiveCfg = Debug|Win32
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Debug|x86.Build.0 = Debug|Win32
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Release|x64.ActiveCfg = Release|x64
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Release|x64.Build.0 = Release|x64
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Release|x86.ActiveCfg = Release|Win32
+		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
