@@ -103,6 +103,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_1798", "SWEA_1798\SWEA
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_1259_screw", "SWEA_1259_screw\SWEA_1259_screw.vcxproj", "{97A25860-4972-49F2-99D6-CF13B3FFA106}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_3238_Combination", "SWEA_3238_Combination\SWEA_3238_Combination.vcxproj", "{D40EDFE8-6113-4F2C-AC38-946A7A23C163}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_3421_burger", "SWEA_3421_burger\SWEA_3421_burger.vcxproj", "{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -511,6 +515,22 @@ Global
 		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Release|x64.Build.0 = Release|x64
 		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Release|x86.ActiveCfg = Release|Win32
 		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Release|x86.Build.0 = Release|Win32
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Debug|x64.ActiveCfg = Debug|x64
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Debug|x64.Build.0 = Debug|x64
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Debug|x86.ActiveCfg = Debug|Win32
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Debug|x86.Build.0 = Debug|Win32
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Release|x64.ActiveCfg = Release|x64
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Release|x64.Build.0 = Release|x64
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Release|x86.ActiveCfg = Release|Win32
+		{D40EDFE8-6113-4F2C-AC38-946A7A23C163}.Release|x86.Build.0 = Release|Win32
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Debug|x64.ActiveCfg = Debug|x64
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Debug|x64.Build.0 = Debug|x64
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Debug|x86.ActiveCfg = Debug|Win32
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Debug|x86.Build.0 = Debug|Win32
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Release|x64.ActiveCfg = Release|x64
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Release|x64.Build.0 = Release|x64
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Release|x86.ActiveCfg = Release|Win32
+		{26FC2C34-372A-431E-B91C-5FBA7A8D80A6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
