@@ -101,6 +101,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_5295", "SWEA_5295\SWEA
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_1798", "SWEA_1798\SWEA_1798.vcxproj", "{BE966F75-5F1F-4C8B-857B-F314A684D132}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_1259_screw", "SWEA_1259_screw\SWEA_1259_screw.vcxproj", "{97A25860-4972-49F2-99D6-CF13B3FFA106}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -501,6 +503,14 @@ Global
 		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Release|x64.Build.0 = Release|x64
 		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Release|x86.ActiveCfg = Release|Win32
 		{BE966F75-5F1F-4C8B-857B-F314A684D132}.Release|x86.Build.0 = Release|Win32
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Debug|x64.ActiveCfg = Debug|x64
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Debug|x64.Build.0 = Debug|x64
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Debug|x86.ActiveCfg = Debug|Win32
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Debug|x86.Build.0 = Debug|Win32
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Release|x64.ActiveCfg = Release|x64
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Release|x64.Build.0 = Release|x64
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Release|x86.ActiveCfg = Release|Win32
+		{97A25860-4972-49F2-99D6-CF13B3FFA106}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
