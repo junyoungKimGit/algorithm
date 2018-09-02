@@ -37,6 +37,7 @@ int gMaxPleasure;
 int gPleasureArr[MAX_N];
 int gVisitedCnt;
 int gSpotCnt;
+int gDay;
 
 void push(int aA)
 {
@@ -46,6 +47,18 @@ void push(int aA)
 int pop(void)
 {
 	return gStack[gStackIdx--];
+}
+
+int calcIdx(int aA)
+{
+	for (int i = 0; i < N; i++)
+	{
+		if (gStack[i] == aA)
+			return i;
+	}
+
+	return 0;
+
 }
 
 int max(int aA, int aB)
@@ -63,76 +76,75 @@ int findNearestHolte(int aHere, int * aHotelIdx)
 	int sMin = MAX_DAY;
 	for (int i = gSpotCnt; i <= N; i++) 
 	{
-		if (sMin == min(sMin, gMap[aHere][i]))
-			*aHotelIdx = i;
 		sMin = min(sMin, gMap[aHere][i]);
+		if (sMin == gMap[aHere][i])
+		{
+			*aHotelIdx = i;			
+		}
 	}
-
 	return sMin;
 }
 
-void findSolve(int aDay, int aTime, int aHere, int aPresure, int aTestcase)
+void findSolve(int aTime, int aHere, int aPresure, int aTestcase)
 {
 
-
 	int sHotelIdx;
+	bool sVisitedSpot = false;
 
-	if (aDay == M)
+	for (int i = 2; i <= gSpotCnt + 1; i++)
+	{
+		if (gVisited[i] != aTestcase &&
+			(aTime + gMap[aHere][i] + gNode[i].mTime <= MAX_DAY))
+		{
+			sVisitedSpot = true;
+			/*cout << "Here : " << aHere << " There : " << i << endl;
+			cout << "CurrenTime : " << aTime << " DistTime : " << gMap[aHere][i] << " JoyTime : " << gNode[i].mTime << endl;*/
+			gVisited[i] = aTestcase;
+			push(i);
+			findSolve(aTime + gMap[aHere][i] + gNode[i].mTime, i, aPresure + gNode[i].mPleasure, aTestcase);
+			pop();
+			gVisited[i] = 0;			
+		}
+	}
+
+	if (gDay == M)
 	{
 		//공항으로 가야 한다.
-		for (int i = 2; i < gSpotCnt; i++)
+		if (aTime + gMap[aHere][1] <= MAX_DAY)
 		{
-			if (gVisited[i] != aTestcase &&
-				(aTime + gMap[aHere][i] + gNode[i].mTime + gMap[i][1] <= MAX_DAY))
-			{
-				/*cout << "Here : " << aHere << " There : " << i << endl;
-				cout << "CurrenTime : " << aTime << " DistTime : " << gMap[aHere][i] << " JoyTime : " << gNode[i].mTime << endl;*/
-				gVisited[i] = aTestcase;
-				push(i);
-				findSolve(aDay, aTime + gMap[aHere][i] + gNode[i].mTime, i, aPresure + gNode[i].mPleasure, aTestcase);
-				pop();
-				gVisited[i] = 0;
-				
-			}			
-		}
+			gMaxPleasure = max(gMaxPleasure, aPresure);
 
-		gMaxPleasure = max(gMaxPleasure, aPresure );				
-		if (gMaxPleasure == aPresure)
-		{
-			//cout << "MAX VAL : " << gMaxPleasure << endl;	
-			int j = 0;
-			for (j = 0; j < gStackIdx; j++)
+			if (gMaxPleasure == aPresure)
 			{
-				gPleasureArr[j] = gStack[j];
+				//cout << "MAX VAL : " << gMaxPleasure << endl;	
+				
+				for (int j = 0; j <= gStackIdx; j++)
+				{
+					gPleasureArr[j] = gStack[j];
+				}
+				gVisitedCnt = gStackIdx;
 			}
-			gVisitedCnt = j;
-		}				
+		}
+		return;
 
 	}
-	else
+	else if (sVisitedSpot == false)
 	{
-		//호텔로 가야한다.
-		for (int i = 2; i < gSpotCnt; i++)
-		{
-			if (gVisited[i] != aTestcase &&
-				(aTime + gMap[aHere][i] + gNode[i].mTime + findNearestHolte(i, &sHotelIdx) <= MAX_DAY))
-			{
-				/*cout << "Here : " << aHere << " There : " << i << endl;
-				cout << "CurrenTime : " << aTime << " DistTime : " << gMap[aHere][i] << " JoyTime : " << gNode[i].mTime << endl;*/
-				gVisited[i] = aTestcase;
-				push(i);
-				findSolve(aDay, aTime + gMap[aHere][i] + gNode[i].mTime, i, aPresure + gNode[i].mPleasure, aTestcase);
-				pop();
-				gVisited[i] = 0;
-			}			
-		}
 
 		//cout << "DAY : " << aDay << endl;
-		findNearestHolte(aHere, &sHotelIdx);
-		findSolve(aDay + 1, 0, sHotelIdx, aPresure, aTestcase);
+		for(int j = gSpotCnt+ 2; j <= N; j++)
+		{
+			if (aTime + gMap[aHere][j] <= MAX_DAY)
+			{
+				gDay++;				
+				push(j);
+				findSolve(0, j, aPresure, aTestcase);
+				pop();				
+				gDay--;
+			}
+		}
 
 	}
-
 
 }
 
@@ -150,6 +162,22 @@ void printDist()
 
 int main()
 {
+
+	//test stack
+
+	//push(1);
+	//push(2);
+	//push(3);
+	//push(4);
+	//cout << pop()<<endl;
+	//cout << pop() << endl;
+	//push(5);
+	//push(6);
+	//cout << pop() << endl;
+	//cout << pop() << endl;
+	//cout << pop() << endl;
+	//cout << pop() << endl;
+
 	cin >> T;
 
 	int sDist;
@@ -177,30 +205,35 @@ int main()
 			gMap[i][i] = MAX_DAY;
 		}
 
-		gSpotCnt = 2;
-		for (int i = 0; i < N; i++)
+		gSpotCnt = 0;
+		for (int i = 1; i <= N; i++)
 		{
 			cin >> sType;
 			if (sType == 'P')
 			{
-				cin >> gNode[gSpotCnt].mTime;
-				cin >> gNode[gSpotCnt].mPleasure;
+				cin >> gNode[i].mTime;
+				cin >> gNode[i].mPleasure;
 				gSpotCnt++;
 			}
 		}
 
 		//cout << "Spot cnt : " << gSpotCnt << endl;
 
-		findSolve(1, 0, 1, 0, t);
-		
+		gDay = 1;
+		findSolve(0, 1, 0, t);		
 
 		cout << "#" << t << " " << gMaxPleasure<<" ";
 
 		/*cout << "cnt : " << gVisitedCnt << endl;
+		*/
 
-		for (int i = 0; i <= gVisitedCnt; i++)
-			cout << gPleasureArr[i]<<" ";
-		cout<<"1";*/
+		if( gMaxPleasure != 0)
+		{ 
+
+			for (int i = 0; i <= gVisitedCnt; i++)
+				cout << gPleasureArr[i]<<" ";
+			cout << "1";
+		}
 
 		cout << endl;
 
@@ -208,8 +241,6 @@ int main()
 		gMaxPleasure = 0;		
 		gStackIdx = -1;
 	}
-
-	cin >> T;
 
 	return 0;
 }
