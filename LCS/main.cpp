@@ -12,6 +12,7 @@ char BSTRING[MAX_LEN];
 int BSTRINGLEN;
 int LCS[MAX_LEN+1][MAX_LEN+1];
 
+
 int T, N;
 
 int getLength(char * aA)
