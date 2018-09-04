@@ -53,11 +53,10 @@ bool isChange(int x, int y)
 			if (gMap[ddx][ddy] == 0)
 			{
 				sIsChaged = true;
-				if(gNextMap[ddx][ddy] != 1)
-				{
-					gNextMap[ddx][ddy] = 1;
-					gChageCnt++;
-				}
+				
+				gMap[ddx][ddy] = gTime + 1;
+				gChageCnt++;
+				
 			}
 
 		}
@@ -89,7 +88,7 @@ void bfs()
 		{
 			for (int j = 0; j < C; j++)
 			{
-				if (gMap[i][j] == 1)
+				if (gMap[i][j] == gTime)
 				{
 					if (isChange(i, j))
 						sIsChage = true;
@@ -97,10 +96,11 @@ void bfs()
 			}
 		}
 		gTime++;
-		/*cout << "Time " << gTime<<endl;
-		printBox();*/
-		copyMapAndReset();
+		/*cout << "Time " << gTime<<endl;*/
+		//printBox();
+		//copyMapAndReset();
 	} while (sIsChage == true);
+	gTime--;
 }
 
 int main()
@@ -108,6 +108,7 @@ int main()
 	int sMaxBox = 0;
 	int sState = 0;
 	cin >> C >> R;
+	gTime = 1;
 
 	for (int i = 0; i < R; i++)
 	{
@@ -128,7 +129,6 @@ int main()
 		cout << --gTime;
 	else
 		cout << "-1";
-
 
 	cin >> C;
 
