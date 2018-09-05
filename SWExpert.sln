@@ -119,6 +119,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BOJ_7576_BFS_tomato", "BOJ_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BOJ_2252_line", "BOJ_2252_line\BOJ_2252_line.vcxproj", "{BD73549B-7DF0-44AD-A2C8-7CB77150BA86}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_5521_best_friends", "SWEA_5521_best_friends\SWEA_5521_best_friends.vcxproj", "{FFA8A15A-2DDA-448D-A9F0-26AE76536210}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -591,6 +593,14 @@ Global
 		{BD73549B-7DF0-44AD-A2C8-7CB77150BA86}.Release|x64.Build.0 = Release|x64
 		{BD73549B-7DF0-44AD-A2C8-7CB77150BA86}.Release|x86.ActiveCfg = Release|Win32
 		{BD73549B-7DF0-44AD-A2C8-7CB77150BA86}.Release|x86.Build.0 = Release|Win32
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Debug|x64.ActiveCfg = Debug|x64
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Debug|x64.Build.0 = Debug|x64
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Debug|x86.ActiveCfg = Debug|Win32
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Debug|x86.Build.0 = Debug|Win32
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Release|x64.ActiveCfg = Release|x64
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Release|x64.Build.0 = Release|x64
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Release|x86.ActiveCfg = Release|Win32
+		{FFA8A15A-2DDA-448D-A9F0-26AE76536210}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

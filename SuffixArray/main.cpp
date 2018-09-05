@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <algorithm>
 #include <cstring>
+#include <iostream>
 
 #define MAX_N 600000
 
@@ -60,7 +61,8 @@ void getSA(const char* str)
 }
 int main()
 {
-	scanf("%s", &str);
+	/*scanf("%s", &str);*/
+	cin >> str;
 	getSA(str);
 
 	// RANK 배열에는 접미사 배열 순서가 들어간다.
@@ -105,6 +107,8 @@ int main()
 	}
 
 	printf("\n\n");
+
+	cin >> str;
 
 
 	return 0;
