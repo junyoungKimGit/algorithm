@@ -26,18 +26,19 @@ void removeCol(int aCol, int aTarget)
 
 	//cout << "REMOVE COL : " << aCol << endl;
 	//printCnt();
-
+	int sPrevVal = 0;
 	for (int i = 0; i < 3; i++)
 	{
 		gCntNum[gMap[i][aCol]]--;
+		sPrevVal = gMap[i][aCol];
 		gMap[i][aCol] = 0;
-		if (gMap[i][aCol] != aTarget)
-		{
-			if (gCntNum[gMap[i][aCol]] <= 2 && gCntNum[gMap[i][aCol]] >= 0)
-			{
-				findTargetAndRemove(gMap[i][aCol]);
-			}
-		}
+		//if (sPrevVal != aTarget)
+		//{
+		//	if (gCntNum[sPrevVal] <= 2 && gCntNum[sPrevVal] >= 0)
+		//	{
+		//		findTargetAndRemove(gMap[i][aCol]);
+		//	}
+		//}
 	}
 	REMOVE_CNT++;
 }
@@ -54,11 +55,7 @@ void findTargetAndRemove(int aTarget)
 		{
 			if (gMap[i][j] == aTarget)
 			{
-				if (i == 0)
-					REMOVE_NUMBER_CNT++;
-
-				removeCol(j, aTarget);
-				return;
+				removeCol(j, aTarget);				
 			}
 		}
 	}
@@ -75,23 +72,20 @@ int countLeftNum()
 	}
 
 	return sCnt;
-
 }
 
 void findSolve()
 {	
-	
-	for (int i = 1; i <= N; i++)
+	while(countLeftNum() > 3)
 	{
-		if (N - REMOVE_NUMBER_CNT > 3)
+		for (int i = 1; i <= N; i++)
 		{
-			if (gCntNum[i] <= 2)
+			if (gCntNum[i] <= 2 && gCntNum[i] >0)
 			{
 				findTargetAndRemove(i);
 			}
 		}
 	}
-	
 }
 
 int main()
@@ -103,7 +97,6 @@ int main()
 	for (int t = 1; t <= T; t++)
 	{
 		cin >> N;
-		REMOVE_NUMBER_CNT = 0;
 
 		for (int i = 0; i < 3; i++)
 		{
@@ -124,6 +117,7 @@ int main()
 		}
 
 		cout << "#" << t << " " << REMOVE_CNT << endl;
+		REMOVE_CNT = 0;
 	}
 
 	cin >> T;
