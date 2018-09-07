@@ -123,6 +123,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_5521_best_friends", "S
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_5357_train_in_tunnel", "SWEA_5357_train_in_ternel\SWEA_5357_train_in_ternel.vcxproj", "{B272E4C6-9C50-4D7A-A1EE-B3D9FCA63A4C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_4193_swimming", "SWEA_4193_swimming\SWEA_4193_swimming.vcxproj", "{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -611,6 +613,14 @@ Global
 		{B272E4C6-9C50-4D7A-A1EE-B3D9FCA63A4C}.Release|x64.Build.0 = Release|x64
 		{B272E4C6-9C50-4D7A-A1EE-B3D9FCA63A4C}.Release|x86.ActiveCfg = Release|Win32
 		{B272E4C6-9C50-4D7A-A1EE-B3D9FCA63A4C}.Release|x86.Build.0 = Release|Win32
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Debug|x64.ActiveCfg = Debug|x64
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Debug|x64.Build.0 = Debug|x64
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Debug|x86.ActiveCfg = Debug|Win32
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Debug|x86.Build.0 = Debug|Win32
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Release|x64.ActiveCfg = Release|x64
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Release|x64.Build.0 = Release|x64
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Release|x86.ActiveCfg = Release|Win32
+		{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
