@@ -53,7 +53,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "prime", "prime\prime.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jumping", "jumping\jumping.vcxproj", "{65D14CBD-552F-49BC-985B-11B52D890128}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DisertCafe", "DisertCafe\DisertCafe.vcxproj", "{C3BE4D03-3C9A-4F30-BFAD-3D9E92B9B81A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DessertCafe", "DisertCafe\DisertCafe.vcxproj", "{C3BE4D03-3C9A-4F30-BFAD-3D9E92B9B81A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeSecureService", "HomeSecureService\HomeSecureService.vcxproj", "{6596123D-AFC6-4140-B851-F5816C866991}"
 EndProject
@@ -95,7 +95,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWE_4013_mysteriousMagnetic
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWE_2383_LunchTime", "SWE_2383_LunchTime\SWE_2383_LunchTime.vcxproj", "{334318D8-FA86-41B2-8C77-80B2233F9FE8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IsolationMicrobe", "IsolationMicrobe\IsolationMicrobe.vcxproj", "{27B5DE9C-4350-4C5C-8164-BD7267FD8EF3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWE_2382_IsolationMicrobe", "IsolationMicrobe\IsolationMicrobe.vcxproj", "{27B5DE9C-4350-4C5C-8164-BD7267FD8EF3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_5295", "SWEA_5295\SWEA_5295.vcxproj", "{CE0E508C-E607-45E5-8A68-415324588A35}"
 EndProject
@@ -126,6 +126,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_4193_swimming", "SWEA_4193_swimming\SWEA_4193_swimming.vcxproj", "{CDCDC11C-2585-4CB3-9783-5BE89C9B8044}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_4583_swap_card", "SWEA_4583_swap_card\SWEA_4583_swap_card.vcxproj", "{500B0868-0A35-4525-AAE0-7F0AA6ADA6C6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEA_4302_DestroyBuilding", "SWEA_4302_DestroyBuilding\SWEA_4302_DestroyBuilding.vcxproj", "{C97AD3F2-3190-4060-AD71-C73ECC70C92E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -631,6 +633,14 @@ Global
 		{500B0868-0A35-4525-AAE0-7F0AA6ADA6C6}.Release|x64.Build.0 = Release|x64
 		{500B0868-0A35-4525-AAE0-7F0AA6ADA6C6}.Release|x86.ActiveCfg = Release|Win32
 		{500B0868-0A35-4525-AAE0-7F0AA6ADA6C6}.Release|x86.Build.0 = Release|Win32
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Debug|x64.ActiveCfg = Debug|x64
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Debug|x64.Build.0 = Debug|x64
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Debug|x86.ActiveCfg = Debug|Win32
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Debug|x86.Build.0 = Debug|Win32
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Release|x64.ActiveCfg = Release|x64
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Release|x64.Build.0 = Release|x64
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Release|x86.ActiveCfg = Release|Win32
+		{C97AD3F2-3190-4060-AD71-C73ECC70C92E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
